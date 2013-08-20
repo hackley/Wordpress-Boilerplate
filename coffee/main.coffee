@@ -1,2 +1,2 @@
-$ ->
-	console.log "ready!"
+jQuery(document).ready ($) ->
+  console.log "ready to go!"
