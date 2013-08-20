@@ -1,12 +1,14 @@
 <?php get_header(); ?>
 
+<!-- This is the category.php file, which shows all posts in a particular category -->
 
-<!-- This is the single.php file, used for "posts" -->
+Category: <?php single_cat_title(); ?> <br />
+<hr />
 
 <!-- Start Loop -->
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<!-- Post content -->
+	<!-- List Blog Posts -->
 	<?php get_template_part( 'content', 'post' ); ?>
 
 <?php endwhile; else: ?>
