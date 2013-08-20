@@ -1,11 +1,12 @@
 <?php get_header(); ?>
 
-<p>This is the home.php file</p>
+<!-- This is the home.php file, which is essentially the "blog" page -->
 
-
+<!-- Start Loop -->
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<h3><?php the_title(); ?></h3>
+	<!-- List Blog Posts -->
+	<?php the_title(); ?>
 	<?php the_content(); ?>
 	<hr>
 
@@ -14,6 +15,7 @@
 	<p>No Posts to display!</p>
 
 <?php endif; ?>
+<!-- End Loop -->
 
 
 <?php get_footer(); ?>

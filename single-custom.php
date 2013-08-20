@@ -1,26 +1,20 @@
 <?php get_header(); ?>
 
-<h5>This is the single-work.php file</h5>
+<!-- This is the single-custom.php file, which acts as a template for a single "custom" post type -->
 
-
+<!-- Start Loop -->
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-	<h3><?php the_title(); ?></h3>
+	<!-- Content for this post -->
+	<?php the_title(); ?>
 	<?php the_field( 'description' ); ?>
-
-	<a href="<?php the_field( 'url_to_website' ); ?>" target="_blank">
-		<?php the_field( 'url_to_website' ); ?>
-	</a>
-
-	<hr>
 
 <?php endwhile; else: ?>
 
 	<p>No Posts to display!</p>
 
 <?php endif; ?>
-
-
+<!-- End Loop -->
 
 
 <?php get_footer(); ?>

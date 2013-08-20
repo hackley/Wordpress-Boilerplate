@@ -11,15 +11,16 @@
 	</head>
 	<body>
 
+		<header>
+			<?php // include Main menu
 
-		<p>this is the header.</p>
+				$args = array(
+					'menu' => 'main-menu'
+				);
 
-		<?php 
+				wp_nav_menu( $args);
 
-			$args = array(
-				'menu' => 'main-menu'
-			);
+			?>
+		</header>
 
-			wp_nav_menu( $args);
-
-		?>
+		<main>
