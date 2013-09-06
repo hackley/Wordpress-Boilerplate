@@ -7,7 +7,13 @@
 
 	<!-- Content for this post -->
 	<?php the_title(); ?>
-	<?php the_field( 'description' ); ?>
+
+	<hr>
+
+	<?php the_post_thumbnail(); ?>
+
+	Custom field 1: <?php echo get_post_meta( get_the_ID(), 'CUSTOM_FIELD1', true ); ?><br/>
+	Custom field 2: <?php echo get_post_meta( get_the_ID(), 'CUSTOM_FIELD2', true ); ?><br/>
 
 <?php endwhile; else: ?>
 

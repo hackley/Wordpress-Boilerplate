@@ -24,8 +24,7 @@
 
 	<!--List the posts -->
 	<?php the_title(); ?>
-	<?php the_permalink(); ?>
-	<?php the_field( 'description' ); ?>
+	<a href="<?php the_permalink(); ?>"><?php the_permalink(); ?></a>
 	<hr>
 
 <?php endwhile; else: ?>
